@@ -69,18 +69,21 @@ public class App
 
 		RideBooking rideBook = new RideBooking();
 		List<DrivingPartner> first = rideBook.find_ride(user0, new Location(0,0), new Location(20,1), db);
+		
 		//Checking for available drivers.
 		if(first.size() > 0) {
 			for(DrivingPartner d: first)
 			   System.out.println("For " + user0.getName() + "," + d.getName() + " is available.");
 		}
 		List<DrivingPartner> second = rideBook.find_ride(user1, new Location(10,0), new Location(15,3), db);
+		
 		//Checking for available drivers.
 		if(second.size() > 0) {
 			for(DrivingPartner d: second)
 			   System.out.println("For " + user1.getName() + "," + d.getName() + " is available.");
 		}
     	List<DrivingPartner> third = rideBook.find_ride(user2, new Location(15,6), new Location(20,4), db);
+    	
     	//Checking for available drivers.
 		if(third.size() > 0) {
 			for(DrivingPartner d: third)
